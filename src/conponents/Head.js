@@ -2,15 +2,15 @@ import React from "react";
 import { togglemenu } from "../utils/appSlice";
 import { useDispatch } from "react-redux";
 const Head = () => {
-    const dispatch=useDispatch()
-    const toggleMenu = () => {
-        dispatch(togglemenu())
-    }
+	const dispatch = useDispatch();
+	const toggleMenu = () => {
+		dispatch(togglemenu());
+	};
 	return (
 		<div className="grid grid-flow-col p-2 m-2 shadow-lg">
 			<div className="flex col-span-1">
-                <img
-                    onClick={()=>toggleMenu()}
+				<img
+					onClick={() => toggleMenu()}
 					className="h-8 mt-2 cursor-pointer"
 					src="https://cdn2.iconfinder.com/data/icons/most-useful-icons-4/50/HAMBURGER_MENU-512.png"
 					alt="menu"
@@ -23,10 +23,11 @@ const Head = () => {
 			</div>
 			<div className="col-span-10 px-20 ">
 				<input
-					className="w-1/2 border border-gray-400 px-2 rounded-l-full"
+					className="w-1/2 border border-gray-400  px-2 py-1 rounded-l-full"
 					type="text"
+					placeholder="Search"
 				/>
-				<button className="border border-gray-400 px-2 rounded-r-full">
+				<button className="border border-gray-400 px-2 py-1 rounded-r-full">
 					Search
 				</button>
 			</div>
