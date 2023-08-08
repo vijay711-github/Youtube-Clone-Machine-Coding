@@ -3,7 +3,7 @@ import React from "react";
 const VideoCard = ({ info }) => {
 	console.log(info);
 	return (
-		<div className=" w-72 p-3 m-2 shadow-lg">
+		<div className=" w-72 p-2 m-1 shadow-lg">
 			<img
 				className="rounded-lg"
 				src={info.snippet.thumbnails.high.url}
