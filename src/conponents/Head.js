@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { togglemenu } from "../utils/appSlice";
 import { useDispatch } from "react-redux";
+import { Serach_Api } from "../utils/constant";
 const Head = () => {
+	const [searchQuery, setserachQuery] = useState("");
+	const [showSuggestions, setShowSuggestions] = useState(["Iphone","VijayWeb","Frontend","Vijaydev.com"])
+	const [suggestion,setsuggestion]=useState(false)
+	// useEffect(() => {
+	// 	const timer = setTimeout(() => getSearchSuggestions(), 200);
+	// 	return () => {
+	// 		clearTimeout(timer);
+	// 	};
+	// }, [searchQuery]);
+	// const getSearchSuggestions = async () => {
+	// 	const data = await fetch(Serach_Api + searchQuery);
+	// 	const json = await data.json();
+	// 	console.log(json);
+	// setShowSuggestions(json[1])
+	// };
 	const dispatch = useDispatch();
 	const toggleMenu = () => {
 		dispatch(togglemenu());
@@ -21,15 +37,29 @@ const Head = () => {
 					alt="YouTube Logo"
 				/>
 			</div>
-			<div className="col-span-10 px-20 ">
-				<input
-					className="w-1/2 border border-gray-400  px-2 py-1 rounded-l-full"
-					type="text"
-					placeholder="Search"
-				/>
-				<button className="border border-gray-400 px-2 py-1 rounded-r-full">
-					Search
-				</button>
+			<div className="col-span-10 px-20 relative">
+				<div>
+					<input
+						className="w-1/2 border border-gray-400  px-2 py-1 rounded-l-full"
+						type="text"
+						placeholder="Search"
+						value={searchQuery}
+						onChange={(e) => {
+							setserachQuery(e.target.value);
+						}}
+						onFocus={() => setsuggestion(true)}
+						onBlur={() => setsuggestion(false)}
+					/>
+					<button className="border border-gray-400 px-2 py-1 rounded-r-full">
+						Search
+					</button>
+					{suggestion&&<div className="absolute bg-white px-5 py-2 w-[26.5rem] shadow-lg rounded-lg border border-gray-50">
+						<ul className="">
+							{showSuggestions.map((suggestion) => { return (<li className="hover:bg-gray-300 w-[100%] px-9 py-1">{suggestion}</li>) })}
+							
+						</ul>
+					</div>}
+				</div>
 			</div>
 			<div className="col-span-1">
 				<img
