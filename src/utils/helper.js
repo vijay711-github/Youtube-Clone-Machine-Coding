@@ -183,7 +183,12 @@ const messages = [
 	"Go to My Github account vijay711-github ☜",
 	"Thanks for being here 💖 ",
 	"Check out my portfolio VIJAY JADHAV-dev 💖 ",
-	"Hey 💖",
+    "Hey 💖",
+    "Awesome",
+    "Thanks!",
+    "Hey",
+    "Thanks for subscribe",
+    "Let's play a game"
 ];
 
 export function randomMessage() {
