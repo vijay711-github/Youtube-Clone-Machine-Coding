@@ -31,11 +31,12 @@ const Head = () => {
 					src="https://cdn2.iconfinder.com/data/icons/most-useful-icons-4/50/HAMBURGER_MENU-512.png"
 					alt="menu"
 				/>
-				<img
+				<a href="#"><img
 					className="h-11 mx-5 mt-0"
 					src="https://logos-world.net/wp-content/uploads/2020/04/YouTube-Logo-2017-present.jpg"
 					alt="YouTube Logo"
 				/>
+					</a>
 			</div>
 			<div className="col-span-10 px-20 relative">
 				<div>
