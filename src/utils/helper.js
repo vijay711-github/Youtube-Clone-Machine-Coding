@@ -180,15 +180,17 @@ export function generateRandomName() {
 
 const messages = [
 	"Hey this is Vijay 🌟",
-	"Go to My Github account vijay711-github ☜",
+	"Go to My Github account vijay711-github ☜ 🎉",
 	"Thanks for being here 💖 ",
 	"Check out my portfolio VIJAY JADHAV-dev 💖 ",
-    "Hey 💖",
-    "Awesome",
-    "Thanks!",
-    "Hey",
-    "Thanks for subscribe",
-    "Let's play a game"
+	"Hey 💖",
+	"Awesome",
+	"Thanks!",
+	"Funny 😂",
+	"Thanks for subscribe",
+	"Let's play a game",
+	"🚀🚀🚀🚀🚀",
+	"💻",
 ];
 
 export function randomMessage() {

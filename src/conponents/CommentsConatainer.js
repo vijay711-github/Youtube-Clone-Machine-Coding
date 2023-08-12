@@ -70,9 +70,9 @@ const commentsData = [
 const CommentsConatainer = () => {
 	return (
 		<div className="m-2 p-2">
-            <h1 className="font-bold text-2xl">Comments</h1>
-            <Comment data={commentsData[0]} />
-            <CommentsList comments={ commentsData} />
+			<h1 className="font-bold text-2xl my-4 ">Comments</h1>
+			<Comment data={commentsData[0]} />
+			<CommentsList comments={commentsData} />
 		</div>
 	);
 };
